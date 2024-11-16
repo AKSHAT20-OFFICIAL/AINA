@@ -1,0 +1,90 @@
+/* Styling for the wheel container */
+.wheel-container {
+    position: relative;
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .outer-circle {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #ddd; /* Outer circle border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .wheel {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center center;
+    overflow: hidden;
+  }
+  
+  .wheel-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: 0% 100%;
+    font-weight: bold;
+    text-align: center;
+    transition: transform 0.5s ease;
+  }
+  
+  .product-name {
+    white-space: nowrap;
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .wheel-pointer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+  
+  .wheel-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+  
+  .rotate-button {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 8px 16px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
+  .rotate-button:hover {
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  /* New style for the container covering half the wheel */
+  .wheel-mask {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    z-index: 5; /* Ensure that this container is in front of the wheel */
+  }
+  
